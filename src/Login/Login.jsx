@@ -8,6 +8,11 @@ const Login = () => {
     const { handleGoogle, loginUser } = useContext(AuthContext);
 
     const navigate = useNavigate();
+
+    const signInGoogle = () => {
+        handleGoogle();
+        navigate('/')
+    }
     const handleLogin = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -49,6 +54,11 @@ const Login = () => {
                             </div>
                             <div className="form-control mt-6">
                                 <input type="submit" value="Log in" className="bg-pink-500 p-2 rounded-xl" />
+                            </div>
+
+
+                            <div className="text-4xl" onClick={signInGoogle}>
+                                G
                             </div>
                         </div>
                     </div>

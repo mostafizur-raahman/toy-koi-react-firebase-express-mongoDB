@@ -24,52 +24,54 @@ const AllToys = () => {
                             <th>Price</th>
                             <th>Rating</th>
                             <th>Available quantity</th>
-
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        {/* row 1 */}
-                        <tr>
-                            {
-                                allToys.map(toy => <div key={toy._id}>
 
-                                    <td>
-                                        <div className="flex items-center space-x-3">
-                                            <div className="avatar">
-                                                <div className="mask mask-squircle w-12 h-12">
-                                                    <img src={toy.image} alt="Avatar Tailwind CSS Component" />
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div className="font-bold">{toy.toyName}</div>
+                        {
+                            allToys.map(toy => <tr key={toy._id}>
+
+
+                                <td>
+                                    <div className="flex items-center space-x-3">
+                                        <div className="avatar">
+                                            <div className="mask mask-squircle w-12 h-12">
+                                                <img src={toy.image} alt="Avatar Tailwind CSS Component" />
                                             </div>
                                         </div>
-                                    </td>
-                                    <td>
-                                        <h1>{toy.sellerName}</h1>
-                                    </td>
-                                    <td>
-                                        <h1>{toy.subCategory}</h1>
-                                    </td>
-                                    <td>
-                                        <h1>{toy.price}</h1>
-                                    </td>
-                                    <td>
-                                        <h1>{toy.quantity}</h1>
-                                    </td>
-                                    <td>
-                                        <h1>{toy.rating}</h1>
-                                    </td>
+                                        <div>
+                                            <div className="font-bold">{toy.toyName}</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h1>{toy.sellerName}</h1>
+                                </td>
+                                <td>
+                                    <h1>{toy.subCategory}</h1>
+                                </td>
+                                <td>
+                                    <h1>{toy.price}</h1>
+                                </td>
+                                <td>
+                                    <h1>{toy.quantity}</h1>
+                                </td>
+                                <td>
+                                    <h1>{toy.rating}</h1>
+                                </td>
 
-                                    <td>
-                                        <button className="btn btn-ghost btn-xs">details</button>
-                                    </td>
+                                <td>
+                                    <button className="btn btn-ghost btn-xs">details</button>
+                                </td>
+                                <td></td>
+                            </tr>
 
 
-                                </div>
-                                )
-                            }
-                        </tr>
+
+                            )
+                        }
+
 
                     </tbody>
                     {/* foot */}

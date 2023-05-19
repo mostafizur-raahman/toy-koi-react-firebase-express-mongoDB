@@ -24,7 +24,7 @@ const router = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path: 'allToys',
+                path: '/allToys',
                 element: <AllToys></AllToys>
             }
         ]
