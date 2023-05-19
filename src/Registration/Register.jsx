@@ -1,8 +1,11 @@
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
 
 
 const Register = () => {
-
+    const [error, setError] = useState(null);
+    const { updateUserData, createUser, user } = useContext(AuthContext);
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -12,6 +15,22 @@ const Register = () => {
         const password = form.password.value;
         const photoURL = form.photoURL.value;
         console.log(name, email, password, photoURL);
+        setError(null);
+        if (password < 6) {
+            setError("Password must be grater then 6 charecter");
+            return;
+        }
+        createUser(email, password)
+            .then(res => {
+                const user = res.user;
+                updateUserData(user, name, photoURL);
+                console.log(user, name, photoURL);
+            })
+            .catch(e => {
+                setError(e.message);
+            })
+
+
     }
     return (
         <div>
