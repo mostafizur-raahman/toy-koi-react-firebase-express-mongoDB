@@ -4,7 +4,9 @@ const AllToysDetails = () => {
     const [singleData, setSingleData] = useState([])
     const { id } = useParams();
     console.log(id);
-
+    useEffect(() => {
+        document.title = 'Toy KOi | All Toys details'
+    }, [])
     useEffect(() => {
         fetch('http://localhost:5000/alltoys')
             .then(res => res.json())

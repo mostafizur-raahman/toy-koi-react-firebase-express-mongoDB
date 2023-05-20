@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 
@@ -10,7 +10,9 @@ const Register = () => {
     const { handleGoogle } = useContext(AuthContext);
 
     const navigate = useNavigate();
-
+    useEffect(() => {
+        document.title = 'Toy KOi | Registration'
+    }, [])
     const signInGoogle = () => {
         handleGoogle();
         navigate('/')

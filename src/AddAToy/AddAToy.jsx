@@ -1,8 +1,11 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import Swal from "sweetalert2";
 const AddAToy = () => {
     const { user } = useContext(AuthContext);
+    useEffect(() => {
+        document.title = 'Toy KOi | Add a toys'
+    }, [])
     const handleAddToy = (e) => {
         e.preventDefault();
         const form = e.target;

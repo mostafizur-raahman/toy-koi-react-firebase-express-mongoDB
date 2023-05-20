@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 
 
 const Blog = () => {
+    useEffect(() => {
+        document.title = 'Toy KOi | Blogs'
+    }, [])
     return (
         <div className="mx-10">
             <div className="mt-10">

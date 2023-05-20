@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaCross } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -8,7 +8,9 @@ const MyToys = () => {
     const data = useLoaderData();
     console.log(data);
     const [remaining, setRemaining] = useState(data);
-
+    useEffect(() => {
+        document.title = 'Toy KOi | my toys'
+    }, [])
     const handledelete = (id) => {
         console.log(id);
         Swal.fire({

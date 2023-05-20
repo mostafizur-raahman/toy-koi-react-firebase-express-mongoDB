@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { FaGoogle } from 'react-icons/fa';
@@ -8,7 +8,9 @@ const Login = () => {
     const { handleGoogle, loginUser } = useContext(AuthContext);
 
     const navigate = useNavigate();
-
+    useEffect(() => {
+        document.title = 'Toy KOi | Login'
+    }, [])
     const signInGoogle = () => {
         handleGoogle();
         navigate('/')
