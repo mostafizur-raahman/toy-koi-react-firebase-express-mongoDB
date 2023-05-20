@@ -4,11 +4,13 @@ import { useEffect, useState } from "react";
 const AllToys = () => {
 
     const [allToys, setAllToys] = useState([]);
+
     useEffect(() => {
         fetch(`http://localhost:5000/alltoys`)
             .then(res => res.json())
             .then(data => setAllToys(data))
     }, [])
+
     console.log(allToys);
     return (
         <div>

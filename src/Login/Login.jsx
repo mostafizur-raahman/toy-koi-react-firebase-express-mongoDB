@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
-
+import { FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
     const [error, setError] = useState(null);
@@ -57,9 +57,9 @@ const Login = () => {
                             </div>
 
 
-                            <div className="text-4xl" onClick={signInGoogle}>
+                            <button className="text-4xl" onClick={signInGoogle}>
                                 G
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </form>
