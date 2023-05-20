@@ -84,7 +84,7 @@ const AllToys = () => {
                                 </td>
 
                                 <td>
-                                    <Link className="btn  btn-xs" to={`/allToys/${toy._id}`}>details</Link>
+                                    <Link className="btn  btn-xs" to={`/toy/${toy._id}`}>details</Link>
                                 </td>
                                 <td></td>
                             </tr>

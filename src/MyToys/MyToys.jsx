@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaCross } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const MyToys = () => {
@@ -10,15 +11,37 @@ const MyToys = () => {
 
     const handledelete = (id) => {
         console.log(id);
-        fetch(`http://localhost:5000/addAToy/${id}`, {
-            method: 'DELETE',
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/addAToy/${id}`, {
+                    method: 'DELETE',
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your coffee     has been deleted.',
+                                'success'
+                            )
+                        }
+                        const remain = remaining.filter(r => r._id !== id);
+                        setRemaining(remain)
+
+                    })
+            }
+
         })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                const remain = remaining.filter(r => r._id !== id);
-                setRemaining(remain)
-            })
+
     }
     return (
         <div>
