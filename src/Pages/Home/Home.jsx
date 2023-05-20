@@ -16,9 +16,12 @@ const Home = () => {
     }, [])
     return (
         <div>
+            {/* banner */}
             <Banner></Banner>
             <Galary></Galary>
+            {/* shop by category */}
             <ShopByCategory></ShopByCategory>
+            {/* reviews */}
             <Reviews></Reviews>
             <OurReviews></OurReviews>
         </div>

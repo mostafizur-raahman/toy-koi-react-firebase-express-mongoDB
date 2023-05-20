@@ -8,4 +8,4 @@
 * install firebase 
 * implement signINWithGoogle,email&password
 
-[Live link : Hosting ]()
+[Live link : Hosting ](https://assignment-11-toy-b257f.web.app/)
