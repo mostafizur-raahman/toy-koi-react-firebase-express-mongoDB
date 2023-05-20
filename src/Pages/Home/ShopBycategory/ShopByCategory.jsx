@@ -101,20 +101,23 @@ const ShopByCategory = () => {
                     <div className='grid lg:flex gap-5  ml-[200px] p-5'>
 
                         <div className="card w-96 glass  h-[400px]">
-                            <figure><img src='' alt="car!" /></figure>
+                            <figure><img src='https://i.ibb.co/yYC8WwH/e1.jpg' alt="car!" /></figure>
                             <div className="card-body">
-                                <h2 className="card-title">Life hack</h2>
-                                <p>How to park your car at your garage?</p>
+                                <h2 className="card-title">Play Kitchen Set</h2>
+                                <h2 className="card-title">peice :$59.99</h2>
+                                <h2 className="card-title">Rating :<FaStar /> 4.9</h2>
                                 <div className="card-actions justify-end">
                                     <button className="btn btn-primary">View details</button>
                                 </div>
                             </div>
                         </div>
                         <div className="card w-96 glass  h-[400px]">
-                            <figure><img src='' alt="car!" /></figure>
+                            <figure><img src='https://i.ibb.co/PzzQc4z/e2.jpg' alt="car!" /></figure>
                             <div className="card-body">
-                                <h2 className="card-title">Life hack</h2>
-                                <p>How to park your car at your garage?</p>
+                                <h2 className="card-title">Remote Control Car</h2>
+                                <h2 className="card-title">price :$39.99</h2>
+                                <h2 className="card-title">Rating :4.3</h2>
+                                <h2 className="card-title">Rating :<FaStar /> 5</h2>
                                 <div className="card-actions justify-end">
                                     <button className="btn btn-primary">View details</button>
                                 </div>

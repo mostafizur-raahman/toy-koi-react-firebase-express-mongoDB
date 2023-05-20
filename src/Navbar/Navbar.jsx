@@ -22,13 +22,16 @@ const Navbar = () => {
                     {
                         user ? <div className='flex gap-5 items-center'>
                             <p><NavLink activeClassName='active' to='/myToys'>My Toys</NavLink></p>
+                            <p><NavLink activeClassName='active' to='/allToys'>All Toys</NavLink></p>
                             <p><NavLink activeClassName='active' to='/addAToy'>Add a toy</NavLink></p>
+                            <p><NavLink activeClassName='active' to='/blog'>Blog</NavLink></p>
                             <img src={user?.photoURL} alt="User photo" className='rounded-full w-[50px] h-[50px]' />
                             <p><button onClick={handleLogout} className=' p-3 rounded-xl text-white bg-pink-500 '>Log out</button></p>
                         </div> : <div className='flex gap-3'>
                             <p><NavLink activeClassName='active' to='/'>Home</NavLink></p>
                             <p><NavLink activeClassName='active' to='/allToys'>All Toys</NavLink></p>
                             <p><NavLink activeClassName='active' to='/login'>Login</NavLink></p>
+                            <p><NavLink activeClassName='active' to='/blog'>Blog</NavLink></p>
                             <p><NavLink to='/register' activeClassName='active'>Registartion</NavLink></p>
                         </div>
                     }

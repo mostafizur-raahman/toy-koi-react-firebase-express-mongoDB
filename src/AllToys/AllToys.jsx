@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import { FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 const AllToys = () => {
 
     const [allToys, setAllToys] = useState([]);
+    const [record, setRecord] = useState([]);
 
     useEffect(() => {
         fetch(`http://localhost:5000/alltoys`)
@@ -12,8 +15,23 @@ const AllToys = () => {
     }, [])
 
     console.log(allToys);
+
+    const searchRecord = () => {
+        fetch(`http://localhost:5000/alltoys/?toyName=${record}`)
+            .then(res => res.json())
+            .then(data => setAllToys(data))
+    }
     return (
         <div>
+            <h1 className="text-3xl m-4 text-center font-bold">Search by name</h1>
+            <div className="flex gap-4 items-center mb-5 mx-auto ">
+                <div className="text-center">
+                    <input onChange={(e) => setRecord(e.target.value)} type="text" placeholder="search  here" className=" text-center input input-bordered input-secondary w-full max-w-xs" />
+                </div>
+                <button onClick={searchRecord} className="text-3xl"> <FaSearch /> </button>
+
+            </div>
+
             <div className=" overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}
@@ -26,7 +44,7 @@ const AllToys = () => {
                             <th>Price</th>
                             <th>Rating</th>
                             <th>Available quantity</th>
-                            <th></th>
+                            <th>Details</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,9 +60,11 @@ const AllToys = () => {
                                                 <img src={toy.image} alt="Avatar Tailwind CSS Component" />
                                             </div>
                                         </div>
-                                        <div>
-                                            <div className="font-bold">{toy.toyName}</div>
-                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div className="font-bold">{toy.toyName}</div>
                                     </div>
                                 </td>
                                 <td>
@@ -64,7 +84,7 @@ const AllToys = () => {
                                 </td>
 
                                 <td>
-                                    <button className="btn btn-ghost btn-xs">details</button>
+                                    <Link className="btn btn-ghost btn-xs" to={`/allToys/${toy._id}`}>details</Link>
                                 </td>
                                 <td></td>
                             </tr>
