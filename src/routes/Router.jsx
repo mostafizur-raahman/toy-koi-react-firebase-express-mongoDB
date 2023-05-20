@@ -38,17 +38,17 @@ const router = createBrowserRouter([
             {
                 path: '/toy/:id',
                 element: <PrivateRoutes> <AllToysDetails></AllToysDetails> </PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5173/toy/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-11-server-three-lemon.vercel.app/${params.id}`)
             },
             {
                 path: '/myToys',
                 element: <MyToys></MyToys>,
-                loader: () => fetch('http://localhost:5000/addAToy')
+                loader: () => fetch('https://assignment-11-server-three-lemon.vercel.app/addAToy')
             },
             {
                 path: '/update/:id',
                 element: <UpdateToy></UpdateToy>,
-                loader: ({ params }) => fetch(`http://localhost:5000/addAToy/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-11-server-three-lemon.vercel.app/addAToy/${params.id}`)
             },
             {
                 path: 'addAtoy',

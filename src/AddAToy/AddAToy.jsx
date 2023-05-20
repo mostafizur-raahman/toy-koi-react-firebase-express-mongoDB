@@ -24,7 +24,7 @@ const AddAToy = () => {
         }
         console.log(addAtoy);
 
-        fetch('http://localhost:5000/addAToy', {
+        fetch('https://assignment-11-server-three-lemon.vercel.app/addAToy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -3,7 +3,7 @@ const Reviews = () => {
     return (
         <div>
             <h1 className="text-4xl font-mono font-bold">OUr Mission</h1>
-            <div className="flex gap-5 mt-5">
+            <div className="lg:flex gap-5 mt-5">
                 <button className="btn bg-pink-500">Activites</button>
                 <button className="btn bg-sky-500">Special Features</button>
                 <button className="btn bg-yellow-400 text-black">Professional Traning</button>

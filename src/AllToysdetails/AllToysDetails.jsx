@@ -8,7 +8,7 @@ const AllToysDetails = () => {
         document.title = 'Toy KOi | All Toys details'
     }, [])
     useEffect(() => {
-        fetch('http://localhost:5000/alltoys')
+        fetch('https://assignment-11-server-three-lemon.vercel.app/alltoys')
             .then(res => res.json())
             .then(data => setSingleData(data))
     }, [])

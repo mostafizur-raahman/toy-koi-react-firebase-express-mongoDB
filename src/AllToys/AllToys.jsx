@@ -11,7 +11,7 @@ const AllToys = () => {
         document.title = 'Toy KOi | All toys'
     }, [])
     useEffect(() => {
-        fetch(`http://localhost:5000/alltoys`)
+        fetch(`https://assignment-11-server-three-lemon.vercel.app/alltoys`)
             .then(res => res.json())
             .then(data => setAllToys(data))
     }, [])
@@ -19,7 +19,7 @@ const AllToys = () => {
     console.log(allToys);
 
     const searchRecord = () => {
-        fetch(`http://localhost:5000/alltoys/?toyName=${record}`)
+        fetch(`https://assignment-11-server-three-lemon.vercel.app/alltoys/toyName=${record}`)
             .then(res => res.json())
             .then(data => setAllToys(data))
     }
