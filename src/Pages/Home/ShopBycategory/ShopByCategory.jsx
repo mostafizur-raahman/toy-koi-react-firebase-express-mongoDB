@@ -39,7 +39,7 @@ const ShopByCategory = () => {
                 <TabList>
                     <Tab>Dolls</Tab>
                     <Tab>Animels</Tab>
-                    <Tab>Electronic toys.</Tab>
+                    <Tab>Electronic toys</Tab>
                 </TabList>
                 <TabPanel>
                     <div className='grid lg:flex gap-5  lg:ml-[200px] p-5'>

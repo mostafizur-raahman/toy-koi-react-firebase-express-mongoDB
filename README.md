@@ -7,5 +7,7 @@
 * then show data
 * install firebase 
 * implement signINWithGoogle,email&password
+* CRUD operating DOne
+* extra two section like Reviews and our mission
 
 [Live link : Hosting ](https://assignment-11-toy-b257f.web.app/)
