@@ -1,12 +1,20 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 
 
 const Register = () => {
     const [error, setError] = useState(null);
-    const { updateUserData, createUser, user } = useContext(AuthContext);
+    const { updateUserData, createUser } = useContext(AuthContext);
 
+    const { handleGoogle } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+
+    const signInGoogle = () => {
+        handleGoogle();
+        navigate('/')
+    }
     const handleRegister = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -71,6 +79,10 @@ const Register = () => {
                                 <div className="form-control mt-6">
                                     <input type="submit" value="Register" className="bg-pink-500 p-2 rounded-xl" />
                                 </div>
+                                <button className="text-4xl" onClick={signInGoogle}>
+                                    G
+                                </button>
+                                <p>alreday have an accout ? <Link to='/login'>Login</Link></p>
                             </div>
                         </div>
                     </form>

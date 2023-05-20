@@ -42,7 +42,7 @@ const ShopByCategory = () => {
                     <Tab>Electronic toys.</Tab>
                 </TabList>
                 <TabPanel>
-                    <div className='grid lg:flex gap-5  ml-[200px] p-5'>
+                    <div className='grid lg:flex gap-5  lg:ml-[200px] p-5'>
 
                         <div className="card w-96 glass  h-[400px]">
                             <figure><img src='https://i.ibb.co/1ZyJ3NW/doll1.jpg' alt="car!" /></figure>
@@ -70,7 +70,7 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid lg:flex gap-5  ml-[200px] p-5' >
+                    <div className='grid lg:flex gap-5  lg:ml-[200px] p-5' >
 
                         <div className="card w-96 glass border-2 h-[400px] ">
                             <figure><img src='https://i.ibb.co/gJHM8nN/animels1.jpg' alt="car!" /></figure>
@@ -98,7 +98,7 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid lg:flex gap-5  ml-[200px] p-5'>
+                    <div className='grid lg:flex gap-5  lg:ml-[200px] p-5'>
 
                         <div className="card w-96 glass  h-[400px]">
                             <figure><img src='https://i.ibb.co/yYC8WwH/e1.jpg' alt="car!" /></figure>

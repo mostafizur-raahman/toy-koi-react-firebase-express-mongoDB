@@ -60,6 +60,7 @@ const Login = () => {
                             <button className="text-4xl" onClick={signInGoogle}>
                                 G
                             </button>
+                            <p>new to toy Koi ? <Link to='/register'>Register</Link></p>
                         </div>
                     </div>
                 </form>
